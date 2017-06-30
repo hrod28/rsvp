@@ -141,27 +141,37 @@ var menu = React.createClass({
         <div className="newPostContainer1"><p>Today's Menu:</p></div>
         <div className="newPostContainer1">
 
-          <p>beef brisket</p>
+          <p>bbq beef brisket</p>
 
         </div>
         <div className="newPostContainer1">
 
-          <p>pork ribs</p>
+          <p>bbq ribs</p>
 
          </div>
          <div className="newPostContainer1">
 
-           <p>cornbread</p>
+           <p>jalepeno cornbread</p>
 
          </div>
          <div className="newPostContainer1">
 
-         <p>corn on the cob</p>
+         <p>coleslaw</p>
 
          </div>
          <div className="newPostContainer1">
 
-         <p>potato salad</p>
+         <p>potato wedges</p>
+
+         </div>
+         <div className="newPostContainer1">
+
+         <p>corn succatash</p>
+
+         </div>
+         <div className="newPostContainer1">
+
+         <p>baked beans</p>
 
          </div>
          <div className="newPostContainer1">
@@ -171,11 +181,22 @@ var menu = React.createClass({
          </div>
          <div className="newPostContainer1">
 
-         <p>tea</p>
+         <p>iced tea</p>
+
+         </div>
+         <div className="newPostContainer1">
+
+         <p>wedding cake:</p>
+         <p>cheesecake with various toppings</p>
 
          </div>
 
       </Card>
+      <footer>
+        <p className="foot">
+          Official RSVP and Information Website for Matthew Mikio Ellison and Heidi Rodriguez' wedding   2017
+        </p>
+      </footer>
     </div>
     )
   }

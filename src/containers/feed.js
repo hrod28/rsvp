@@ -22,6 +22,11 @@ const feed = React.createClass({
       <Nav
         handleLogoutSubmit={this.handleLogoutSubmit} />
       <PostsContainer></PostsContainer>
+      <footer>
+        <p className="foot">
+          Official RSVP and Information Website for Matthew Mikio Ellison and Heidi Rodriguez' wedding   2017
+        </p>
+      </footer>
       </div>
     )
   }

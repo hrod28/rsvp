@@ -11,6 +11,8 @@ import Nav from './components/Nav.js';
 import menu from './containers/menu';
 import Nav1 from './components/Navlogin.js';
 import profileContainer from './containers/profile.js'
+import parkingForm from './components/parking.js'
+import registry from './containers/registry.js'
 
 //import components:
 
@@ -27,6 +29,8 @@ var AppRouter = React.createClass({
           <Route path="/profile" component={profileContainer} />
           <Route path="/myProfile" component={editProfileContainer} />
           <Route path="/menu" component={menu} />
+          <Route path="/parkingForm" component={parkingForm} />
+          <Route path="/registry" component={registry} />
         </Router>
     </div>
     )

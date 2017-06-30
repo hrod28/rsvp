@@ -113,32 +113,39 @@ var CreatePost = React.createClass({
 
 
     return (
+      <div>
       <Card className="uiCardMenu">
+          <div className="newPostContainer1"><p>Please Join us for an afternoon in the sun as we celebrate our wedding on horsetooth lake!</p></div>
+      </Card>
+      <Card className="uiCardMenu2">
 
-        <div className="newPostContainer">
+          <div><p>The celebration begins at 2pm at the South Bay Pavilion.  We encourage guests to come casually dressed and ready for some fun on the land and water!! (i.e. towels, swim clothes, flotation device) We will have jetskis and stand-up paddleboards available for use throughout the afternoon.  Per park regulations, it is required for all guests 14 yrs old and younger to wear life vests.  We will provide a limited number of life vests, but we do encourage you to bring your own if possible.  </p></div>
 
-        <RaisedButton
-        className="navButton"
+      </Card>
+      <Card className="uiCardMenu3">
 
-           label="Click on a button below"
-           backgroundColor="#90C15B"
-         />
-        </div>
+          <div><p>Dogs are WELCOME! </p></div>
+          <div><p>(but must stay on leash per park regulations) </p></div>
+      </Card>
+      <Card className="uiCardMenu4">
+
+          <div><p>Vehicle entrance/parking fees are required.  We will provide a parking pass free of charge if needed.  Just click on the "request a parking pass" button and follow the intsructions.</p></div>
+      </Card>
+
+      <Card className="uiCardMenu1">
+
+          <div><p>To find out specific information about the event and to RSVP, please click on a button below</p></div>
+      </Card>
+
+      <Card className="uiCardMenu5">
+
+
 
         <div className="newPostContainer">
         <RaisedButton
         className="navButton"
         href="/menu"
         label="menu"
-        backgroundColor="#90C15B"
-        />
-        </div>
-
-        <div className="newPostContainer">
-        <RaisedButton
-        className="navButton"
-        href="/myProfile"
-        label="RSVP Here"
         backgroundColor="#90C15B"
         />
         </div>
@@ -156,6 +163,16 @@ var CreatePost = React.createClass({
         <div className="newPostContainer">
         <RaisedButton
         className="navButton"
+        href="/myProfile"
+        label="RSVP Here"
+        backgroundColor="#90C15B"
+        />
+        </div>
+
+
+        <div className="newPostContainer">
+        <RaisedButton
+        className="navButton"
         href="/"
         label="Landing Page"
         backgroundColor="#90C15B"
@@ -165,7 +182,16 @@ var CreatePost = React.createClass({
         <div className="newPostContainer">
         <RaisedButton
         className="navButton"
-        href="/newPost"
+        href="/registry"
+        label="Wedding Registry"
+        backgroundColor="#90C15B"
+        />
+        </div>
+
+        <div className="newPostContainer">
+        <RaisedButton
+        className="navButton"
+        href="/parkingForm"
         label="Request A Parking Pass"
         backgroundColor="#90C15B"
         />
@@ -174,6 +200,12 @@ var CreatePost = React.createClass({
 
 
       </Card>
+      <footer>
+        <p className="foot">
+          Official RSVP and Information Website for Matthew Mikio Ellison and Heidi Rodriguez' wedding   2017
+        </p>
+      </footer>
+      </div>
     )
   }
 });

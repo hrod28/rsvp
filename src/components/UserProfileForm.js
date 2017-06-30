@@ -1,5 +1,11 @@
-import React from 'react';
-import { Router, browserHistory, location } from 'react-router'
+
+
+
+
+
+import React, { Component } from 'react';
+import { Router, browserHistory, location } from 'react-router';
+import axios from 'axios';
 //import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
@@ -39,9 +45,16 @@ const styles = {
 const ProfileForm = React.createClass({
 
   getInitialState(){
-    console.log(this.props, "props at initial state");
+
     return ({
-      skills:[],
+      first_name: '',
+      last_name: '',
+      phone_number: '',
+      email: '',
+      guest_num: '',
+      questions: '',
+      comments: '',
+
     });
   },
 
@@ -64,13 +77,29 @@ const ProfileForm = React.createClass({
   },
 
   handleSubmit(e) {
-    console.log('handleSubmit');
-    e.preventDefault();
 
-    var formData = {...this.state};
+  axios.post('http://localhost:3001/api/rsvp', {
+    first_name: this.state.first_name,
+    last_name:this.state.last_name,
+    phone_number: this.state.phone_number,
+    email: this.state.email,
+    guest_num: this.state.guest_num,
+    questions: this.state.guestions,
+    comments: this.state.comments
 
-    this.props.onProfileSubmit(formData);
+  })
+    .then((response) => {
+
+      // if (err || !res.ok) {
+      //   console.log('ERROR: ', err);
+      // } else {
+      console.log('this');
+        console.log(response);
+    });
+    // this.props.navigator.push({name: 'VoteValidation'});
+
   },
+
 
   setValue: function (field, event) {
     var object = {};
@@ -117,13 +146,13 @@ const ProfileForm = React.createClass({
             <div className="row">
               <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
                 <TextField className="profileTextArea" type="text"
-                  id="firstname" floatingLabelText="First Name" onChange={this.setValue.bind(this, 'firstName')} value={this.state.firstName}
+                  id="firstname" floatingLabelText="First Name" onChange={this.setValue.bind(this, 'first_name')} value={this.state.first_name}
                   underlineFocusStyle={styles.underlineStyle}
                   floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
               </div>
               <div className="col-sm-offset-2 col-md-offset-1 col-md-5 col-lg-offset-1">
                 <TextField className="profileTextArea" type="text"
-                  id="lastname" floatingLabelText="Last Name" onChange={this.setValue.bind(this, 'lastName')} value={this.state.lastName}
+                  id="lastname" floatingLabelText="Last Name" onChange={this.setValue.bind(this, 'last_name')} value={this.state.last_name}
                   underlineFocusStyle={styles.underlineStyle}
                   floatingLabelFocusStyle={styles.floatingLabelFocusStyle}  />
               </div>
@@ -131,7 +160,7 @@ const ProfileForm = React.createClass({
 
             <div className="row">
               <div className="col-md-offset-1 col-md-5 col-lg-offset-1">
-                <TextField className="profileTextArea" type="number" floatingLabelText="Phone Number" value={this.state.phoneNumber} onChange={this.setValue.bind(this, 'phoneNumber')}
+                <TextField className="profileTextArea" type="number" floatingLabelText="Phone Number" value={this.state.phone_number} onChange={this.setValue.bind(this, 'phone_number')}
                 underlineFocusStyle={styles.underlineStyle}
                 floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
               </div>
@@ -143,7 +172,7 @@ const ProfileForm = React.createClass({
             </div>
               <div className="row">
                 <div className="col-md-offset-1 col-md-5 col-lg-offset-1">
-                  <TextField className="profileTextArea" type="number" floatingLabelText="Number of Guests (0, 1, 2)" value={this.state.zipCode} onChange={this.setValue.bind(this, 'zipCode')}
+                  <TextField className="profileTextArea" type="text" floatingLabelText="Number of Guests (0, 1, 2)" value={this.state.guest_num} onChange={this.setValue.bind(this, 'guest_num')}
                   underlineFocusStyle={styles.underlineStyle}
                   floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                 </div>
@@ -165,12 +194,12 @@ const ProfileForm = React.createClass({
 
                 <div className="row">
                   <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Questions" value={this.state.profileUrl} onChange={this.setValue.bind(this, 'profileUrl')}
+                    <TextField className="profileTextArea" type="text" floatingLabelText="Questions" value={this.state.questions} onChange={this.setValue.bind(this, 'questions')}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                   </div>
                   <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Comments" value={this.state.website} onChange={this.setValue.bind(this, 'website')}
+                    <TextField className="profileTextArea" type="text" floatingLabelText="Comments" value={this.state.comments} onChange={this.setValue.bind(this, 'comments')}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                   </div>

@@ -72,6 +72,13 @@ nav {
   margin: 20px auto;
 }
 
+.uiCard1 {
+  background: url(../public/img/googiemoab.jpg) no-repeat center center;
+  background-size: cover;
+  margin: 20px;
+  transition: .5s
+
+}
 .uiCardMenu {
   background: url(../public/img/moab.jpg) no-repeat center center;
   background-size: cover;
@@ -80,19 +87,51 @@ nav {
 
 }
 
-.uiCard1 {
+.uiCardMenu1 {
+  text-align: center;
+  font-size: 20px;
+  background: url(../public/img/back.png) no-repeat center center;
+  background-size: cover;
+  margin: 20px;
+  transition: .5s
+}
+.uiCardMenu2{
+  text-align: center;
+  font-size: 20px;
+  background: url(../public/img/back.png) no-repeat center center;
+  background-size: cover;
+  margin: 20px;
+  transition: .5s
+}
+.uiCardMenu3{
+  text-align: center;
+  font-size: 20px;
+  background: url(../public/img/back.png) no-repeat center center;
+  background-size: cover;
+  margin: 20px;
+  transition: .5s
+}
+.uiCardMenu4{
+  text-align: center;
+  font-size: 20px;
+  background: url(../public/img/back.png) no-repeat center center;
+  background-size: cover;
+  margin: 20px;
+  transition: .5s
+}
+.uiCardMenu5{
   background: url(../public/img/googiemoab.jpg) no-repeat center center;
   background-size: cover;
   margin: 20px;
   transition: .5s
 }
-.uiCard3 {
-
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
+.uiCard5{
+  background-color: yellow;
+  background-size: cover;
+  margin: 20px;
   transition: .5s
 }
+
 .uiCard:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4) !important;
 }
@@ -104,6 +143,7 @@ nav {
   /*padding-top: 0px !important;*/
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   margin: 0 10px 10px 10px;
+
 
 }
 

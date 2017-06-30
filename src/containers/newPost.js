@@ -26,6 +26,7 @@ const newPost = React.createClass({
       <div className="postsContainer">
         <NewPost></NewPost>
       </div>
+      
     </div>
     )
   }

@@ -55,9 +55,12 @@ var profileContainer = React.createClass({
 
     return(
       <div>
+      <div>
         <Nav
           handleLogoutSubmit={this.handleLogoutSubmit} />
           {profileForm}
+      </div>
+    
       </div>
     )
   }
