@@ -281,6 +281,13 @@ h3{
   padding-bottom: 20px;
   padding-top: 20px;
 }
+.newPostContainerbuttons {
+  flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 .newPostContainer1 {
   flex-wrap: wrap;
   width: 50%;

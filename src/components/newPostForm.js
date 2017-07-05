@@ -119,7 +119,7 @@ var CreatePost = React.createClass({
       </Card>
       <Card className="uiCardMenu2">
 
-          <div><p>The celebration begins at 2pm at the South Bay Pavilion.  We encourage guests to come casually dressed and ready for some fun on the land and water!! (i.e. towels, swim clothes, flotation device) We will have jetskis and stand-up paddleboards available for use throughout the afternoon.  Per park regulations, it is required for all guests 14 yrs old and younger to wear life vests.  We will provide a limited number of life vests, but we do encourage you to bring your own if possible.  </p></div>
+          <div><p>The celebration begins at 2pm at the South Bay Pavilion.  We encourage guests to come casually dressed and ready for some fun on the land and water!! (i.e. towels, swim clothes, flotation device) We will have jet skis and stand-up paddleboards available for use throughout the afternoon.  Per park regulations, it is required for all guests 14 yrs old and younger to wear life vests.  We will provide a limited number of life vests, but we do encourage you to bring your own if possible.  </p></div>
 
       </Card>
       <Card className="uiCardMenu3">
@@ -129,7 +129,7 @@ var CreatePost = React.createClass({
       </Card>
       <Card className="uiCardMenu4">
 
-          <div><p>Vehicle entrance/parking fees are required.  We will provide a parking pass free of charge if needed.  Just click on the "request a parking pass" button and follow the intsructions.</p></div>
+          <div><p>Parking at Horsetooth Reservoir is $7.00 per vehicle.  We will provide a parking pass free of charge, just click on the "parking pass" button and follow the intsructions.</p></div>
       </Card>
 
       <Card className="uiCardMenu1">
@@ -141,7 +141,7 @@ var CreatePost = React.createClass({
 
 
 
-        <div className="newPostContainer">
+        <div className="newPostContainerbuttons">
         <RaisedButton
         className="navButton"
         href="/menu"
@@ -150,7 +150,7 @@ var CreatePost = React.createClass({
         />
         </div>
 
-        <div className="newPostContainer">
+        <div className="newPostContainerbuttons">
 
         <RaisedButton
         className="navButton"
@@ -160,7 +160,7 @@ var CreatePost = React.createClass({
         />
         </div>
 
-        <div className="newPostContainer">
+        <div className="newPostContainerbuttons">
         <RaisedButton
         className="navButton"
         href="/myProfile"
@@ -169,8 +169,16 @@ var CreatePost = React.createClass({
         />
         </div>
 
+        <div className="newPostContainerbuttons">
+        <RaisedButton
+        className="navButton"
+        href="/parking"
+        label="Parking Pass"
+        backgroundColor="#90C15B"
+        />
+        </div>
 
-        <div className="newPostContainer">
+        <div className="newPostContainerbuttons">
         <RaisedButton
         className="navButton"
         href="/"
@@ -179,23 +187,15 @@ var CreatePost = React.createClass({
         />
         </div>
 
-        <div className="newPostContainer">
+        <div className="newPostContainerbuttons">
         <RaisedButton
         className="navButton"
         href="/registry"
-        label="Wedding Registry"
+        label="Registry"
         backgroundColor="#90C15B"
         />
         </div>
 
-        <div className="newPostContainer">
-        <RaisedButton
-        className="navButton"
-        href="/parking"
-        label="Request A Parking Pass"
-        backgroundColor="#90C15B"
-        />
-        </div>
 
 
 

@@ -168,13 +168,9 @@ const editProfileContainer = React.createClass({
               </div>
 
                 <div className="row">
+
                   <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Questions" value={this.state.questions} onChange={this.setValue.bind(this, 'questions')}
-                    underlineFocusStyle={styles.underlineStyle}
-                    floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
-                  </div>
-                  <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Comments" value={this.state.comments} onChange={this.setValue.bind(this, 'comments')}
+                    <TextField className="profileTextArea" type="text" floatingLabelText="Comments/Questions" value={this.state.comments} onChange={this.setValue.bind(this, 'comments')}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                   </div>

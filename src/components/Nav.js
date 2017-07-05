@@ -21,7 +21,7 @@ const Nav = React.createClass({
           <RaisedButton
           className="navButton"
              href="/newPost"
-             label="Home Menu"
+             label="Home"
              backgroundColor="#90C15B"
            />
            <img className="logo" src="img/moab.jpg"/>
