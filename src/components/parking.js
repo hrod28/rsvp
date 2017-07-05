@@ -61,25 +61,25 @@ const parkingForm = React.createClass({
     console.log(this.props.disabled);
   },
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({...nextProps.profileData});
-    this.setState(nextProps.disabled);
-  },
+  // componentWillReceiveProps(nextProps) {
+  //   this.setState({...nextProps.profileData});
+  //   this.setState(nextProps.disabled);
+  // },
 
-  disableFields(){
-    var location = browserHistory.getCurrentLocation();
-    console.log(location, this.state);
-    if (location === "/myProfile"){
-      this.setState({disabled:true});
-      console.log(location, this.state);
-    }
-  },
+  // disableFields(){
+  //   var location = browserHistory.getCurrentLocation();
+  //   console.log(location, this.state);
+  //   if (location === "/myProfile"){
+  //     this.setState({disabled:true});
+  //     console.log(location, this.state);
+  //   }
+  // },
 
-  handleSubmit(e) {
+  handleSubmit1(e) {
 
-  axios.post('http://localhost:3001/api/parking', {
+  axios.post('https://weddingdb.herokuapp.com/api/parking', {
     name: this.state.name,
-    contact:this.state.contact,
+    contact: this.state.contact,
     comments: this.state.comments
 
   })
@@ -101,25 +101,25 @@ const parkingForm = React.createClass({
     object[field] = event.target.value;
     this.setState(object);
   },
-  skillsHandleChange(event) {
-    console.log(this.state.skills);
-    let skillNum = event.target.value;
-    if (this.state.skills.includes(event.target.value)) {
-      console.log('state already has this number');
-      let newArr = this.state.skills.slice();
-      let numIndex = newArr.indexOf(skillNum);
-      newArr.splice(numIndex, 1);
-      this.setState({
-        skills: newArr
-      });
-      console.log(this.state);
-    } else {
-      // console.log("before concat", this.state.skills);
-      let changing = this.state.skills.concat([skillNum]);
-      this.setState({skills: changing});
-      // console.log("after concat", this.state.skills);
-    }
-  },
+  // skillsHandleChange(event) {
+  //   console.log(this.state.skills);
+  //   let skillNum = event.target.value;
+  //   if (this.state.skills.includes(event.target.value)) {
+  //     console.log('state already has this number');
+  //     let newArr = this.state.skills.slice();
+  //     let numIndex = newArr.indexOf(skillNum);
+  //     newArr.splice(numIndex, 1);
+  //     this.setState({
+  //       skills: newArr
+  //     });
+  //     console.log(this.state);
+  //   } else {
+  //     // console.log("before concat", this.state.skills);
+  //     let changing = this.state.skills.concat([skillNum]);
+  //     this.setState({skills: changing});
+  //     // console.log("after concat", this.state.skills);
+  //   }
+  // },
 
   render: function(){
     var login = (true) ?
@@ -147,7 +147,7 @@ const parkingForm = React.createClass({
       <Card className="uiCard">
         <div className="profileContainer">
           <h3>Please fill out this form to receive your free parking pass for the event.</h3>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit1}>
 
             <div className="row">
               <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
@@ -195,11 +195,6 @@ const parkingForm = React.createClass({
           </form>
         </div>
       </Card>
-      <footer>
-        <p className="foot">
-          Official RSVP and Information Website for Matthew Mikio Ellison and Heidi Rodriguez' wedding   2017
-        </p>
-      </footer>
       </div>
 
     );

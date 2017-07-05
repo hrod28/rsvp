@@ -31,7 +31,7 @@ const styles = {
   }
 };
 
-var DATABASE_URL = 'https://artops-server.herokuapp.com';
+var DATABASE_URL = 'https://weddingdb.herokuapp.com';
 
 var menu = React.createClass({
   getInitialState () {

@@ -10,7 +10,9 @@ import editProfileContainer from './containers/editprofile.js';
 import Nav from './components/Nav.js';
 import menu from './containers/menu';
 import Nav1 from './components/Navlogin.js';
+import ProfileForm from './components/UserProfileForm.js';
 import profileContainer from './containers/profile.js'
+import editParkingContainer from './containers/editparking.js'
 import parkingForm from './components/parking.js'
 import registry from './containers/registry.js'
 
@@ -28,6 +30,7 @@ var AppRouter = React.createClass({
           <Route path="/newPost" component={newPostForm} />
           <Route path="/profile" component={profileContainer} />
           <Route path="/myProfile" component={editProfileContainer} />
+          <Route path="/parking" component={editParkingContainer} />
           <Route path="/menu" component={menu} />
           <Route path="/parkingForm" component={parkingForm} />
           <Route path="/registry" component={registry} />

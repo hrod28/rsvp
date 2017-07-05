@@ -14,7 +14,7 @@ import Chip from 'material-ui/Chip';
 
 import request from 'superagent';
 
-var DATABASE_URL = 'https://artops-server.herokuapp.com';
+var DATABASE_URL = 'https://weddingdb.herokuapp.com';
 
 
 const post = React.createClass({
@@ -45,7 +45,7 @@ const post = React.createClass({
   // },
 
   componentDidMount() {
-    this.getComments();
+    // this.getComments();
 
   },
 

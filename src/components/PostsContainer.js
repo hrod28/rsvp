@@ -4,7 +4,7 @@ import React from 'react';
 import Post from './Post';
 import request from 'superagent';
 
-const DATABASE_URL = "http://localhost:3001";
+const DATABASE_URL = "http://weddingdb.herokuapp.com";
 
 
 const PostsContainer = React.createClass({

@@ -1,7 +1,5 @@
 
-
-
-
+'use strict';
 
 import React, { Component } from 'react';
 import { Router, browserHistory, location } from 'react-router';
@@ -12,7 +10,7 @@ import SelectField from 'material-ui/SelectField';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/RaisedButton';
 import Card from 'material-ui/Card';
-import Checkbox from 'material-ui/Checkbox';
+// import Checkbox from 'material-ui/Checkbox';
 // import CardActions from 'material-ui/Card/CardActions';
 // import CardHeader from 'material-ui/Card/CardHeader';
 // import CardMedia from 'material-ui/Card/CardMedia';
@@ -68,17 +66,17 @@ const ProfileForm = React.createClass({
   },
 
   disableFields(){
-    var location = browserHistory.getCurrentLocation();
-    console.log(location, this.state);
-    if (location === "/myProfile"){
-      this.setState({disabled:true});
-      console.log(location, this.state);
-    }
+    // var location = browserHistory.getCurrentLocation();
+    // console.log(location, this.state);
+    // if (location === "/myProfile"){
+    //   this.setState({disabled:true});
+    //   console.log(location, this.state);
+    // }
   },
 
   handleSubmit(e) {
 
-  axios.post('http://localhost:3001/api/rsvp', {
+  axios.post('https://weddingdb.herokuapp.com/api/rsvp', {
     first_name: this.state.first_name,
     last_name:this.state.last_name,
     phone_number: this.state.phone_number,
@@ -107,23 +105,23 @@ const ProfileForm = React.createClass({
     this.setState(object);
   },
   skillsHandleChange(event) {
-    console.log(this.state.skills);
-    let skillNum = event.target.value;
-    if (this.state.skills.includes(event.target.value)) {
-      console.log('state already has this number');
-      let newArr = this.state.skills.slice();
-      let numIndex = newArr.indexOf(skillNum);
-      newArr.splice(numIndex, 1);
-      this.setState({
-        skills: newArr
-      });
-      console.log(this.state);
-    } else {
-      // console.log("before concat", this.state.skills);
-      let changing = this.state.skills.concat([skillNum]);
-      this.setState({skills: changing});
-      // console.log("after concat", this.state.skills);
-    }
+    // console.log(this.state.skills);
+    // let skillNum = event.target.value;
+    // if (this.state.skills.includes(event.target.value)) {
+    //   console.log('state already has this number');
+    //   let newArr = this.state.skills.slice();
+    //   let numIndex = newArr.indexOf(skillNum);
+    //   newArr.splice(numIndex, 1);
+    //   this.setState({
+    //     skills: newArr
+    //   });
+    //   console.log(this.state);
+    // } else {
+    //   // console.log("before concat", this.state.skills);
+    //   let changing = this.state.skills.concat([skillNum]);
+    //   this.setState({skills: changing});
+    //   // console.log("after concat", this.state.skills);
+    // }
   },
 
   render: function(){
@@ -160,7 +158,7 @@ const ProfileForm = React.createClass({
 
             <div className="row">
               <div className="col-md-offset-1 col-md-5 col-lg-offset-1">
-                <TextField className="profileTextArea" type="number" floatingLabelText="Phone Number" value={this.state.phone_number} onChange={this.setValue.bind(this, 'phone_number')}
+                <TextField className="profileTextArea" type="text" floatingLabelText="Phone Number" value={this.state.phone_number} onChange={this.setValue.bind(this, 'phone_number')}
                 underlineFocusStyle={styles.underlineStyle}
                 floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
               </div>

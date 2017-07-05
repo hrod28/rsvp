@@ -27,7 +27,7 @@ const styles = {
   }
 };
 
-var DATABASE_URL = 'https://artops-server.herokuapp.com';
+var DATABASE_URL = 'https://weddingdb.herokuapp.com';
 
 var CreatePost = React.createClass({
   getInitialState () {
@@ -191,7 +191,7 @@ var CreatePost = React.createClass({
         <div className="newPostContainer">
         <RaisedButton
         className="navButton"
-        href="/parkingForm"
+        href="/parking"
         label="Request A Parking Pass"
         backgroundColor="#90C15B"
         />
