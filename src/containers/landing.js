@@ -108,6 +108,15 @@ render: function(){
           <h3 className="secondaryLandingCarouselParagraph"><a className="linkstyle" href="/newPost"></a></h3>
           </Carousel.Caption>
           </Carousel.Item>
+          <Carousel.Item>
+          <img width={700} height={300} alt="700x300" src="img/radBest.jpg"/>
+          <Carousel.Caption>
+          <h1 className="landingCarouselHeader"></h1>
+          <h2 className="primaryLandingCarouselParagraph">matt and heidi</h2>
+          <h2 className="primaryLandingCarouselParagraph">2017</h2>
+          <h3 className="secondaryLandingCarouselParagraph"><a className="linkstyle" href="/newPost">enter site</a></h3>
+          </Carousel.Caption>
+          </Carousel.Item>
             <Carousel.Item>
               <img width={700} height={300} alt="700x300" src="img/googiemoab.jpg"/>
               <Carousel.Caption>

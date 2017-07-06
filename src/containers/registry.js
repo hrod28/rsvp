@@ -122,31 +122,27 @@ const registry = React.createClass({
   },
 
   render: function(){
-    var login = (true) ?
-    <LoginForm
-
-    /> : null;
-
-
-
-      const isLogged = (sessionStorage.id) ?
-        <Nav
-          handleLogoutSubmit={this.handleLogoutSubmit} />
-          :
-        <Nav1
-          handleLoginSubmit={this.handleLoginSubmit}/>
 
 
 
     return(
 
       <div>
-      {isLogged}
-      {login}
+        <Nav />
 
       <Card className="uiCard">
         <div className="profileContainer">
-          <h3>Don't Buy anything us anything!!</h3>
+          <h3>When embarking on a new journey in life, it is always nice to look back and remember where you've been.  I can say without a doubt that I would not be where I am today if it were not for the kindess of others --friends, family, and strangers alike.    </h3>
+          <h3>We want to continue the trend to pay it forward.  We don't really need a blender, but we do need more kindness, compassion, and love in our world.  So instead of registering at any retail store, we wanted to challenge you to "Pay it Forward" in honor of our wedding celebration.</h3>
+
+
+
+                </div>
+        <div className="profileContainer">
+          <h3>What do we mean by "Pay it Forward"?  <br />It's pretty simple:  Do something kind for someone else.</h3>
+
+
+
 
 
                 </div>
@@ -157,6 +153,38 @@ const registry = React.createClass({
 
 
       </Card>
+      <Card className="uiCard">
+        <div className="profileContainer">
+          <h3>Donate time or money to a local non-profit.  Here are a few local organizations that we are passionate about:</h3>
+
+          <h3><br/>  <li><a href="http://thefamilycenterfc.org/?page_id=4">La Familia/ The Family Center</a>, an early childhood education center with a goal of strengthening and stabilizing working families</li>   <br/><li><a href="https://www.facebook.com/ColoRADogs/">ColoRADogs,</a> a local non-profit committed to protecting bully breeds and abolishing breed specific legislation</li>    <br/><li><a href="http://summitstonehealth.org/larimer-county-mental-health/how-you-can-help/donate-now/">SummitStone Health Partners,</a> a private, not-for-profit, integrated care provider of behavioral (mental health and addiction) services</li><br /><li><a href="http://bikefortcollins.org/vision-and-mission">Bike Fort Collins</a>, creating an advocacy platform and bike culture that is inclusive of all bike riders, independent of ability or background
+</li> </h3>
+        </div>
+        <br></br>
+        <br></br>
+      </Card>
+      <Card className="uiCard">
+        <div className="profileContainer">
+        <h2>Compassion doesn't have to be Complicated...</h2>
+        <h3><li>Spend time with someone who is all alone.</li></h3>
+          <h3><li>Volunteer to help clean up litter at your local park or waterway.</li></h3>
+          <h3><li>Make some art to brighten someone's day.</li></h3>
+          <h3><li>Help your elderly neighbor with their lawn and yard work.</li></h3>
+          <h3><li>Donate awesome school supplies to children who need it.</li></h3>
+          <h3><li>Cook dinner for someone who is sick.</li></h3>
+          <h3><li>Leave an encouraging note for a stranger.</li></h3>
+        </div>
+        <br></br>
+        <br></br>
+      </Card>
+      <Card className="uiCard">
+        <div className="profileContainer">
+          <h3>Thank You in advance for your participation in this experiment.  Let's see how much positivity we can send out into the world!</h3>
+        </div>
+        <br></br>
+        <br></br>
+      </Card>
+
       <footer>
         <p className="foot">
           Official RSVP and Information Website for Matthew Mikio Ellison and Heidi Rodriguez' wedding   2017

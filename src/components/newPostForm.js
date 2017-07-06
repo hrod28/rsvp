@@ -115,7 +115,7 @@ var CreatePost = React.createClass({
     return (
       <div>
       <Card className="uiCardMenu">
-          <div className="newPostContainer1"><p>Please Join us for an afternoon in the sun as we celebrate our wedding on horsetooth lake!</p></div>
+          <div className="newPostContainer1"><p>Please Join us for an afternoon in the sun as we celebrate our wedding on horsetooth reservoir!</p></div>
       </Card>
       <Card className="uiCardMenu2">
 

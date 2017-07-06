@@ -333,6 +333,8 @@ h3{
 
 .logo {
   display: inline;
+  padding-left: 15px;
+  padding-right: 15px;
   float: left;
   height: 60px;
   width: auto;
