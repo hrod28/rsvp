@@ -13,8 +13,9 @@ import Nav1 from './components/Navlogin.js';
 import ProfileForm from './components/UserProfileForm.js';
 import profileContainer from './containers/profile.js'
 import editParkingContainer from './containers/editparking.js'
-import parkingForm from './components/parking.js'
+import Validation from './components/parking.js'
 import registry from './containers/registry.js'
+
 
 //import components:
 
@@ -31,8 +32,8 @@ var AppRouter = React.createClass({
           <Route path="/profile" component={profileContainer} />
           <Route path="/myProfile" component={editProfileContainer} />
           <Route path="/parking" component={editParkingContainer} />
+          <Route path="/validation" component={Validation} />
           <Route path="/menu" component={menu} />
-          <Route path="/parkingForm" component={parkingForm} />
           <Route path="/registry" component={registry} />
         </Router>
     </div>

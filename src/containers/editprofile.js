@@ -69,6 +69,22 @@ const editProfileContainer = React.createClass({
 
 
   handleSubmit(e) {
+    // $(document.body).append(form);
+    // document.body.appendChild(form);
+
+  axios.get('https://weddingdb.herokuapp.com/api/rsvp', {
+
+
+  })
+    .then((response) => {
+
+      // if (err || !res.ok) {
+      //   console.log('ERROR: ', err);
+      // } else {
+      console.log('this');
+        console.log(response);
+    })
+    .then((response) => {
 
   axios.post('https://weddingdb.herokuapp.com/api/rsvp', {
     first_name: this.state.first_name,
@@ -80,16 +96,17 @@ const editProfileContainer = React.createClass({
     comments: this.state.comments
 
   })
+})
     .then((response) => {
 
       // if (err || !res.ok) {
       //   console.log('ERROR: ', err);
       // } else {
       console.log('this');
-        // console.log(response);
+        console.log(response);
     });
-    browserHistory.push('/newPost');
-
+    // this.props.navigator.push({name: 'VoteValidation'});
+    browserHistory.push('/validation');
   },
 
 

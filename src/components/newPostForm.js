@@ -119,7 +119,7 @@ var CreatePost = React.createClass({
       </Card>
       <Card className="uiCardMenu2">
 
-          <div><p>The celebration begins at 2pm at the South Bay Pavilion.  We encourage guests to come casually dressed and ready for some fun on the land and water!! (i.e. towels, swim clothes, flotation device) We will have jet skis and stand-up paddleboards available for use throughout the afternoon.  Per park regulations, it is required for all guests 14 yrs old and younger to wear life vests.  We will provide a limited number of life vests, but we do encourage you to bring your own if possible.  </p></div>
+          <div><p>The celebration begins August 13th at 2pm at the South Bay Pavilion.  We encourage guests to come casually dressed and ready for some fun on the land and water!! (i.e. towels, swim clothes, flotation device) We will have jet skis and stand-up paddleboards available for use throughout the afternoon.  Per park regulations, it is required for all guests 14 yrs old and younger to wear life vests.  We will provide a limited number of life vests, but we do encourage you to bring your own if possible.  </p></div>
 
       </Card>
       <Card className="uiCardMenu3">
