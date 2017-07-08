@@ -49,7 +49,7 @@ const editParkingContainer = React.createClass({
       name: '',
       contact: '',
       comments: '',
-      
+
 
     });
   },
@@ -66,25 +66,39 @@ const editParkingContainer = React.createClass({
 
 
   handleSubmit1(e) {
+    axios.get('https://weddingdb.herokuapp.com/api/parking', {
+
+
+    })
+      .then((response) => {
+
+        // if (err || !res.ok) {
+        //   console.log('ERROR: ', err);
+        // } else {
+        console.log('this');
+          console.log(response);
+      })
+      .then((response) => {
 
   axios.post('https://weddingdb.herokuapp.com/api/parking', {
     name: this.state.name,
-    contact:this.state.contact,
+    contact: this.state.contact,
     comments: this.state.comments
 
   })
+})
     .then((response) => {
 
       // if (err || !res.ok) {
       //   console.log('ERROR: ', err);
       // } else {
       console.log('this');
-        // console.log(response);
+        console.log(response);
     });
+    // this.props.navigator.push({name: 'VoteValidation'});
     browserHistory.push('/newPost');
 
   },
-
 
   setValue: function (field, event) {
     var object = {};

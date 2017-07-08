@@ -61,21 +61,21 @@ const parkingForm = React.createClass({
     console.log(this.props.disabled);
   },
 
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({...nextProps.profileData});
-  //   this.setState(nextProps.disabled);
-  // },
-
-  // disableFields(){
-  //   var location = browserHistory.getCurrentLocation();
-  //   console.log(location, this.state);
-  //   if (location === "/myProfile"){
-  //     this.setState({disabled:true});
-  //     console.log(location, this.state);
-  //   }
-  // },
 
   handleSubmit1(e) {
+    axios.get('https://weddingdb.herokuapp.com/api/parking', {
+
+
+    })
+      .then((response) => {
+
+        // if (err || !res.ok) {
+        //   console.log('ERROR: ', err);
+        // } else {
+        console.log('this');
+          console.log(response);
+      })
+      .then((response) => {
 
   axios.post('https://weddingdb.herokuapp.com/api/parking', {
     name: this.state.name,
@@ -83,6 +83,7 @@ const parkingForm = React.createClass({
     comments: this.state.comments
 
   })
+})
     .then((response) => {
 
       // if (err || !res.ok) {
@@ -92,6 +93,7 @@ const parkingForm = React.createClass({
         console.log(response);
     });
     // this.props.navigator.push({name: 'VoteValidation'});
+    browserHistory.push('/newPost');
 
   },
 
